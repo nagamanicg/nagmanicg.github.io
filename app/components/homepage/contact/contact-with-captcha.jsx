@@ -52,9 +52,13 @@ function ContactWithCaptcha() {
       setError({ ...error, required: false });
     };
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    // const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    // const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    
+    const serviceID = "service_0iqqnxp";
+    const templateID = "template_4segl7t";
+    const options = { publicKey: "9e9oLsaRFFyClJo6q" };
 
     try {
       const res = await emailjs.send(serviceID, templateID, input, options);

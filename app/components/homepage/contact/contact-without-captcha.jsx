@@ -34,13 +34,22 @@ function ContactWithoutCaptcha() {
       setError({ ...error, required: false });
     };
 
-    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-    const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+    // const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    // const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    // const options = { publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY };
+
+    const serviceID = "service_0iqqnxp";
+    const templateID = "template_4segl7t";
+    const options = { publicKey: "9e9oLsaRFFyClJo6q" };
+
+
+    console.log("aaaa",process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY);
+    console.log("bbbb",process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID);
+
 
     try {
       const res = await emailjs.send(serviceID, templateID, input, options);
-
+      // const res= await emailjs.send("service_0iqqnxp","template_4segl7t");
       if (res.status === 200) {
         toast.success('Message sent successfully!');
         setInput({
