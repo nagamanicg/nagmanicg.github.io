@@ -5,6 +5,5 @@ export const contactsData = {
     github: 'https://github.com/nagamanicg',
     linkedIn: 'https://www.linkedin.com/in/nagamanicgunjal/',
     twitter: 'https://twitter.com/nagamanicg',
-    stackOverflow: 'https://stackoverflow.com/users/16840768/abu-said',
     devUsername: "said7388"
 }
